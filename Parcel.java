@@ -16,21 +16,17 @@ class Parcel{
   }
 
   public int costToShip(String speed, String domestic) {
-    Integer totalCost = 0;
+    int totalCost = 0;
     if (speed.equals("overnight")) {
       totalCost += 5;
     } else {
       totalCost += 2;
     }
-
-
     if (domestic.equals("Yes")) {
       totalCost += 1;
     } else {
       totalCost += 3;
     }
-
-
     totalCost += ((mWeight)/2);
     return totalCost;
   }
